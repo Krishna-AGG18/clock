@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script> 
+    window.onload = function() {
+        setInterval(() => {
+            let date = new Date();
+            let hour = document.querySelector('.hour');
+            let min = document.querySelector('.mins');
+            let sec = document.querySelector('.sec');
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
+            hour.textContent = h < 10 ? '0' + h : h;
+            min.textContent = m < 10 ? '0' + m : m;
+            sec.textContent = s < 10 ? '0' + s : s;
+
+            let date2 = new Date();
+            let dat = document.querySelector('.date');
+            let day = document.querySelector('.day');
+            let zone = document.querySelector('.zone');
+            let d1 = date2.getDate();
+            let d2 = date2.getMonth();
+            let d3 = date2.getFullYear();
+            let da = date2.getDay();
+        
+            const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            day.textContent = "Day :" + daysOfWeek[da];
+            dat.textContent = "Date :" + `${d1}/${d2}/${d3}`;
+            let z = date2.getTimezoneOffset();
+            let offset = `GMT${z > 0 ? '-' : '+'}${Math.abs(z) / 60}${("0" + Math.abs(z) % 60).slice(-2)}`; 
+            let timeZoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            zone.textContent = `Zone : ${offset} (${timeZoneName})`;
+        }, 1000);
+    }
+    </script>
+</head>
+
+<body>
+    <div class="head">
+        <p> Tick - Tok : Real Time Clock </p>
+    </div>
+    <div class="container">
+        <div class="hour"></div>
+        <div class="colon">:</div>
+        <div class="mins"></div>
+        <div class="colon">:</div>
+        <div class="sec"></div>
+    </div>
+    <div class="detail">
+        <div class="date"></div>
+        <div class="day"></div>
+        <div class="zone"></div>
+    </div>
+</body>
+
+</html>

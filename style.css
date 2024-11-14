@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(https://wallpapers.com/images/hd/black-galaxy-1920-x-1080-background-ac8b0wc82bs93n69.jpg);
+}
+
+.head {
+    font-size: 45px;
+    padding: 30px;
+    font-weight: bolder;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.container {
+    font-family: 'Segoe UI';
+    width: auto;
+    color: white;
+    border-radius: 20px;
+    font-weight: bolder;
+    justify-content: center;
+    height: 40vh;
+    font-size: 122px;
+    display: flex;
+    gap: 30px;
+    margin: 40px auto;
+    align-items: center;
+    padding: 25px;
+}
+
+.hour,
+.mins,
+.sec {
+    border: 5px solid;
+    border-radius: 50%;
+    padding: 30px;
+    border-color: aliceblue;
+    animation: circle 5s linear infinite alternate;
+}
+
+@keyframes circle {
+    0% {
+        border-top-color: rgb(114, 0, 114);
+        border-right-color: aliceblue;
+        border-bottom-color: aliceblue;
+        border-left-color: aliceblue;
+    }
+
+    25% {
+        border-top-color: rgb(114, 0, 114);
+        border-right-color: rgb(114, 0, 114);
+        border-bottom-color: aliceblue;
+        border-left-color: aliceblue;
+    }
+
+    50% {
+        border-top-color: rgb(114, 0, 114);
+        border-right-color: rgb(114, 0, 114);
+        border-bottom-color: rgb(114, 0, 114);
+        border-left-color: aliceblue;
+    }
+
+    75% {
+        border-top-color: rgb(114, 0, 114);
+        border-right-color: rgb(114, 0, 114);
+        border-bottom-color: rgb(114, 0, 114);
+        border-left-color: rgb(114, 0, 114);
+    }
+
+    100% {
+        border-top-color: aliceblue;
+        border-right-color: aliceblue;
+        border-bottom-color: aliceblue;
+        border-left-color: aliceblue;
+    }
+}
+
+.detail {
+    font-size: 20px;
+    color: white;
+    padding: 0px 25px;
+}
