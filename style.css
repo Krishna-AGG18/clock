@@ -10,6 +10,8 @@ body {
 .head {
     font-size: 45px;
     padding: 30px;
+    flex-wrap: wrap;
+    text-align: center;
     font-weight: bolder;
     display: flex;
     color: white;
@@ -26,6 +28,7 @@ body {
     height: 40vh;
     font-size: 122px;
     display: flex;
+    /* flex-wrap: wrap; */
     gap: 30px;
     margin: 40px auto;
     align-items: center;
@@ -39,7 +42,7 @@ body {
     border-radius: 50%;
     padding: 30px;
     border-color: aliceblue;
-    animation: circle 5s linear infinite ;
+    animation: circle 5s linear infinite;
 }
 
 @keyframes circle {
@@ -83,4 +86,17 @@ body {
     font-size: 20px;
     color: white;
     padding: 0px 25px;
+}
+@media screen and (max-width : 820px){
+    .container{
+    flex-direction: column;
+    font-size: 50px;
+    margin-top: 20px;
+   }
+   .colon{
+    display: none;
+   }
+   .detail{
+    margin-top: 20px;
+   }
 }
