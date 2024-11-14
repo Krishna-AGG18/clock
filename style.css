@@ -110,7 +110,9 @@ body {
         padding: 20px;
         font-size: 50px;
     }
-
+    .colon{
+        display: none;
+    }
     .detail {
         font-size: 16px;
         padding: 0px 10px;
