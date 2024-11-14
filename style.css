@@ -39,7 +39,7 @@ body {
     border-radius: 50%;
     padding: 30px;
     border-color: aliceblue;
-    animation: circle 5s linear infinite;
+    animation: circle 5s linear infinite ;
 }
 
 @keyframes circle {
